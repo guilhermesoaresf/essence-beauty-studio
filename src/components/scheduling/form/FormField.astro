@@ -1,0 +1,59 @@
+---
+import Input from '../../shared/Input.astro';
+import Select from '../../shared/select/Select.astro';
+
+interface Props {
+  label: string;
+  id: string;
+  placeholder: string;
+  type?: 'text' | 'email' | 'tel' | 'select';
+  required?: boolean;
+  options?: string[];
+  autocomplete?: string;
+  inputmode?: 'text' | 'email' | 'tel' | 'numeric';
+}
+
+const {
+  label,
+  id,
+  placeholder,
+  type = 'text',
+  required = true,
+  options = [],
+  autocomplete,
+  inputmode,
+} = Astro.props;
+
+const inputType = type === 'select' ? 'text' : type;
+---
+
+<div class="space-y-2 w-full">
+  <label id={`label-${id}`} for={id} class="label-error text-muted-foreground text-sm uppercase tracking-[0.6px] font-medium">
+    {label} {!required && '(OPCIONAL)'}
+  </label>
+  <div class="relative">
+    {type === "select" ?
+    <Select
+      id={id}
+      placeholder={placeholder}
+      required={required}
+      options={options}
+    />
+    :
+    <Input
+      id={id}
+      placeholder={placeholder}
+      required={required}
+      type={inputType}
+      autocomplete={autocomplete}
+      inputmode={inputmode}
+    />
+    }
+    <p
+      id={`error-${id}`}
+      class="absolute mt-1 text-sm font-medium text-red-500 hidden"
+      data-error={id}
+      aria-live="polite"
+    ></p>
+  </div>
+</div>

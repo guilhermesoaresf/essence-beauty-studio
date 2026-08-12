@@ -1,0 +1,21 @@
+---
+interface Props {
+  id: string;
+  placeholder: string;
+  required: boolean;
+  options: string[];
+}
+
+const { id, placeholder, required, options } = Astro.props;
+---
+
+<select
+  id={id}
+  name={id}
+  required={required}
+  aria-describedby={`error-${id}`}
+  class="input-error w-full cursor-pointer border-b border-black bg-transparent pb-2.75 pt-0.5 text-foreground outline-none transition-colors focus:border-primary"
+>
+  <option value="" selected disabled>{placeholder}</option>
+  {options.map((option) => <option value={option}>{option}</option>)}
+</select>

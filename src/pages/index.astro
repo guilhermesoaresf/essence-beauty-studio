@@ -1,0 +1,138 @@
+---
+import { Image } from 'astro:assets';
+import { ArrowRight } from '@lucide/astro';
+import Button from '../components/shared/Button.astro';
+import Card from '../components/theStudio/Card.astro';
+import Layout from '../layouts/Layout.astro';
+import couch from '../assets/theStudio/couch.png';
+import environment from '../assets/theStudio/Environment.png';
+import environment2 from '../assets/theStudio/Environment2.png';
+import tools from '../assets/theStudio/tools.png';
+---
+
+<Layout
+  title="Essence Beauty Studio — Beleza natural e sofisticada"
+  description="Projeto conceitual de um estúdio de beleza com serviços, experiência editorial e simulação de agendamento."
+>
+  <section class="relative -mx-5 flex min-h-[calc(100vh-5rem)] items-center overflow-hidden bg-[url('/imgs/hero.png')] bg-cover bg-center px-5 text-white md:-mx-20 md:px-20">
+    <div class="absolute inset-0 bg-linear-to-r from-black/65 via-black/30 to-transparent"></div>
+    <div class="relative z-1 max-w-3xl md:ml-20">
+      <p class="text-xs font-semibold tracking-[0.3em] md:text-sm">NATURAL SOPHISTICATION</p>
+      <h1 class="mt-6 font-bodoni-moda text-5xl font-semibold leading-[1.05] md:text-7xl">
+        Realçando sua beleza natural com <i>elegância</i>.
+      </h1>
+      <p class="mt-7 max-w-xl text-base leading-7 text-white/90 md:text-lg">
+        Uma experiência conceitual dedicada à estética contemporânea, ao cuidado e à expressão individual.
+      </p>
+      <div class="mt-9">
+        <Button href="/scheduling" text="EXPLORAR EXPERIÊNCIA" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-7xl gap-12 py-20 lg:grid-cols-2 lg:items-center lg:gap-24 lg:py-32">
+    <div>
+      <p class="text-xs font-semibold tracking-[0.22em] text-primary md:text-sm">NOSSA FILOSOFIA</p>
+      <h2 class="mt-5 font-bodoni-moda text-4xl font-medium leading-tight md:text-6xl">
+        A arte de não mascarar, mas revelar.
+      </h2>
+      <p class="mt-7 max-w-xl text-base leading-8 text-muted-foreground md:text-lg">
+        A proposta Essence combina texturas naturais, acabamentos refinados e uma estética atemporal. Cada detalhe desta experiência digital foi pensado para comunicar cuidado e confiança.
+      </p>
+      <a href="/services" class="mt-8 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm font-semibold">
+        CONHECER SERVIÇOS <ArrowRight size={18} aria-hidden="true" />
+      </a>
+    </div>
+    <div class="overflow-hidden">
+      <Image
+        src={couch}
+        alt="Interior minimalista em tons claros com poltrona e iluminação suave"
+        class="aspect-4/3 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+      />
+    </div>
+  </section>
+
+  <section class="-mx-5 bg-secondbackground px-5 py-20 md:-mx-20 md:px-20 md:py-28">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-20">
+      <div class="overflow-hidden">
+        <Image
+          src={tools}
+          alt="Pincéis e ferramentas de beleza organizados em uma bancada"
+          class="aspect-4/3 w-full object-cover transition-transform duration-700 hover:scale-105"
+        />
+      </div>
+      <div>
+        <p class="text-xs font-semibold tracking-[0.22em] text-primary md:text-sm">CURADORIA ESSENCE</p>
+        <h2 class="mt-5 font-bodoni-moda text-4xl font-medium md:text-5xl">Técnica, intenção e leveza.</h2>
+        <p class="mt-6 text-base leading-8 text-muted-foreground md:text-lg">
+          Este projeto apresenta uma marca fictícia por meio de uma direção visual editorial, componentes reutilizáveis e uma jornada responsiva do catálogo à simulação de reserva.
+        </p>
+        <div class="mt-9 flex gap-10">
+          <div>
+            <p class="font-bodoni-moda text-4xl text-primary">3</p>
+            <p class="mt-1 text-xs font-semibold tracking-wider">FRENTES DE CUIDADO</p>
+          </div>
+          <div>
+            <p class="font-bodoni-moda text-4xl text-primary">100%</p>
+            <p class="mt-1 text-xs font-semibold tracking-wider">CONCEITO FICTÍCIO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl py-20 md:py-32">
+    <div class="max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.22em] text-primary md:text-sm">O AMBIENTE</p>
+      <h2 class="mt-4 font-bodoni-moda text-4xl font-medium md:text-5xl">Calma em cada detalhe.</h2>
+      <p class="mt-5 leading-7 text-muted-foreground">
+        Um cenário digital construído para transmitir conforto, privacidade e sofisticação sem excessos.
+      </p>
+    </div>
+    <div class="mt-12 grid gap-6 lg:grid-cols-5">
+      <div class="overflow-hidden lg:col-span-3">
+        <Image src={environment} alt="Ambiente claro e minimalista de um estúdio conceitual" class="h-full min-h-100 w-full object-cover" />
+      </div>
+      <div class="grid gap-6 lg:col-span-2">
+        <Image src={environment2} alt="Detalhes de decoração do estúdio conceitual" class="h-full w-full object-cover" />
+        <Image src={tools} alt="Ferramentas de beleza sobre uma bancada" class="h-full w-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="-mx-5 bg-secondbackground px-5 py-20 md:-mx-20 md:px-20 md:py-28">
+    <div class="mx-auto max-w-7xl">
+      <div class="text-center">
+        <p class="text-xs font-semibold tracking-[0.22em] text-primary md:text-sm">EXPERIÊNCIAS ILUSTRATIVAS</p>
+        <h2 class="mt-4 font-bodoni-moda text-4xl font-medium md:text-5xl">Vozes do conceito Essence</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <Card
+          text="O ambiente transmite cuidado desde o primeiro contato. A proposta visual é delicada, clara e acolhedora."
+          role="RELATO FICTÍCIO — EXPERIÊNCIA DE NOIVA"
+        />
+        <Card
+          text="A jornada é simples e elegante, com informações objetivas e uma sensação consistente em cada página."
+          role="RELATO FICTÍCIO — CONSULTORIA"
+        />
+        <Card
+          text="A sofisticação aparece nos detalhes, na tipografia e na forma como cada serviço é apresentado."
+          role="RELATO FICTÍCIO — EDITORIAL"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl py-24 text-center md:py-36">
+    <p class="text-xs font-semibold tracking-[0.22em] text-primary">EXPERIMENTE O FLUXO</p>
+    <h2 class="mt-5 font-bodoni-moda text-4xl font-medium leading-tight md:text-6xl">
+      Uma demonstração de agendamento segura e sem envio de dados.
+    </h2>
+    <p class="mx-auto mt-6 max-w-2xl leading-7 text-muted-foreground">
+      Preencha o formulário para conhecer a validação e a experiência de interface. Tudo acontece apenas no seu navegador.
+    </p>
+    <div class="mt-9 flex justify-center">
+      <Button href="/scheduling" text="INICIAR DEMONSTRAÇÃO" />
+    </div>
+  </section>
+</Layout>

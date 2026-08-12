@@ -1,0 +1,73 @@
+---
+import { professionals } from "../../../content/professionals";
+import { servicesName } from "../../../content/servicesName";
+import FormField from "./FormField.astro";
+---
+
+<form id="scheduling-form" class="space-y-10" novalidate>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
+    <FormField
+      label='NOME COMPLETO'
+      id='fullName'
+      placeholder='Ex. Maria Clara'
+      autocomplete='name'
+    />
+    <FormField
+      label='E-MAIL'
+      id='email'
+      placeholder='seu@email.com'
+      type='email'
+      autocomplete='email'
+      inputmode='email'
+    />
+    <FormField
+      label='TELEFONE'
+      id='phone'
+      placeholder='(00) 00000-0000'
+      type='tel'
+      autocomplete='tel'
+      inputmode='tel'
+    />
+    <FormField
+      label='SERVIÇO DESEJADO'
+      id='desiredService'
+      placeholder='Selecione um serviço'
+      type='select'
+      options={servicesName}
+    />
+    <FormField
+      label='DATA PREFERIDA'
+      id='preferredDate'
+      placeholder='dd/mm/yyyy'
+      inputmode='numeric'
+    />
+    <FormField
+      label='HORÁRIO PREFERIDO'
+      id='preferredTime'
+      placeholder='-- : --'
+      inputmode='numeric'
+    />
+  </div>
+  <FormField
+    label='OBSERVAÇÕES'
+    id='observations'
+    placeholder='Ex: Informações sobre seu cabelo, pele ou necessidades específicas.'
+    required={false}
+  />
+  <FormField
+    label='ESCOLHA O PROFISSIONAL'
+    id='desiredProfessional'
+      placeholder='Deseja alguma especialidade?'
+    type='select'
+    required={false}
+    options={professionals}
+  />
+  <div class="pt-4 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-10">
+    <button id="confirm-scheduling" type="submit" class="px-8 py-3 rounded-full bg-primary text-white font-semibold text-sm uppercase hover:bg-primary/90 transition-colors cursor-pointer">
+      SIMULAR AGENDAMENTO
+    </button>
+    <p class="font-medium text-xs tracking-[0.6px] italic text-muted-foreground">Demonstração local: nenhum dado será enviado ou armazenado.</p>
+  </div>
+</form>
+
+<script src="../../../lib/form/initForm.js"></script>

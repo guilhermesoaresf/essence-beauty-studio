@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import schedulingImage from '../../assets/services/services-intro.png';
+---
+
+<section class="hidden grid-cols-12 gap-6 md:grid">
+  <div class="col-span-8 space-y-2">
+    <p class="text-sm font-semibold tracking-[0.3em] text-primary">EXPERIÊNCIA DEMONSTRATIVA</p>
+    <h1 class="font-bodoni-moda text-6xl font-semibold tracking-[-1.28px] text-black">Simule seu horário</h1>
+  </div>
+  <p class="col-span-4 flex items-end pl-9 text-right leading-7 text-muted-foreground">
+    Explore o fluxo de uma reserva sem enviar ou armazenar informações pessoais.
+  </p>
+</section>
+
+<section class="absolute inset-x-0 top-20 h-[50vh] overflow-hidden md:hidden">
+  <Image
+    src={schedulingImage}
+    alt="Retrato editorial do projeto conceitual Essence"
+    class="h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 flex flex-col justify-end bg-black/35 pb-8 pl-5">
+    <span class="mb-2 text-sm uppercase tracking-[0.3em] text-white">Experiência demonstrativa</span>
+    <h1 class="font-bodoni-moda text-4xl tracking-[-0.02em] text-white">Simule seu horário</h1>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+---
+import { BookOpenText, ShieldCheck } from '@lucide/astro';
+import PremiumExperience from '../components/scheduling/PremiumExperience.astro';
+import SchedulingForm from '../components/scheduling/form/SchedulingForm.astro';
+import ImportantInformations from '../components/scheduling/important-information/ImportantInformations.astro';
+import Button from '../components/shared/Button.astro';
+import Layout from '../layouts/Layout.astro';
+import schedulingImage from '../assets/services/services-intro.png';
+---
+
+<Layout
+  title="Simulação de agendamento — Essence Beauty Studio"
+  description="Demonstração segura do fluxo de agendamento do projeto conceitual Essence. Nenhum dado é enviado ou armazenado."
+>
+  <div class="mb-16 flex flex-col gap-12">
+    <PremiumExperience />
+
+    <div class="flex flex-col gap-10 pb-18 pt-[calc(45vh)] md:pt-0">
+      <div class="flex items-start gap-3 rounded-xl border border-primary/25 bg-primary/8 p-4 text-sm leading-6 text-muted-foreground">
+        <ShieldCheck class="mt-0.5 shrink-0 text-primary" size={20} aria-hidden="true" />
+        <p><strong class="text-foreground">Ambiente de demonstração:</strong> o formulário é processado somente no navegador. Nenhuma informação será transmitida ou armazenada.</p>
+      </div>
+
+      <div class="grid gap-16 md:grid-cols-12">
+        <section class="bg-card px-6 pb-14 pt-10 shadow-editorial sm:px-12 md:col-span-7">
+          <div class="mb-10 space-y-2">
+            <p class="text-sm font-semibold tracking-[0.14em] text-primary">FLUXO DE RESERVA</p>
+            <p class="italic leading-7 text-muted-foreground">Preencha dados fictícios para experimentar validação, formatação e feedback de sucesso.</p>
+          </div>
+          <SchedulingForm />
+        </section>
+
+        <aside class="space-y-7 md:col-span-5">
+          <div class="relative hidden aspect-4/5 overflow-hidden md:block">
+            <img
+              src={schedulingImage.src}
+              alt="Retrato editorial do projeto conceitual Essence"
+              class="h-full w-full object-cover grayscale-20 transition-transform duration-700 hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+          </div>
+          <ImportantInformations />
+        </aside>
+      </div>
+    </div>
+
+    <section class="border-t border-border/30 pt-12 text-center">
+      <h2 class="font-bodoni-moda text-4xl font-medium text-title md:text-5xl">Quer explorar o catálogo?</h2>
+      <p class="mx-auto mt-4 max-w-2xl leading-7 text-muted-foreground">Conheça as três áreas de serviço criadas para esta experiência fictícia.</p>
+      <div class="mt-8 flex justify-center">
+        <Button href="/services" text="VER CATÁLOGO COMPLETO" IconComponent={BookOpenText} />
+      </div>
+    </section>
+  </div>
+</Layout>

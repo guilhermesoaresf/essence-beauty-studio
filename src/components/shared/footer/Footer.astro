@@ -1,0 +1,46 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+---
+
+<footer class="w-full border-t border-border/50 px-6 pb-8 pt-16 md:px-20 lg:pt-24">
+  <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
+    <section class="md:col-span-5">
+      <h2 class="font-bodoni-moda text-3xl font-medium">Essence</h2>
+      <p class="mt-4 max-w-md leading-7 text-muted-foreground">
+        Conceito digital para um estúdio fictício dedicado à beleza natural e à sofisticação editorial.
+      </p>
+      <p class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+        Projeto acadêmico demonstrativo
+      </p>
+    </section>
+
+    <nav class="md:col-span-3" aria-label="Links do rodapé">
+      <h2 class="text-sm font-semibold">NAVEGAÇÃO</h2>
+      <ul class="mt-5 space-y-3 text-muted-foreground">
+        <li><a href="/" class="hover:text-primary">O Studio</a></li>
+        <li><a href="/services" class="hover:text-primary">Serviços</a></li>
+        <li><a href="/scheduling" class="hover:text-primary">Demonstração</a></li>
+      </ul>
+    </nav>
+
+    <section class="md:col-span-4">
+      <h2 class="text-sm font-semibold">TRANSPARÊNCIA</h2>
+      <div class="mt-5 flex flex-col items-start gap-3 text-muted-foreground">
+        <button data-modal="privacy" class="cursor-pointer hover:text-primary">Privacidade</button>
+        <button data-modal="terms" class="cursor-pointer hover:text-primary">Sobre o projeto</button>
+        <a
+          href="https://github.com/guilhermesoaresf/essence-beauty-studio"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-2 hover:text-primary"
+        >
+          Código no GitHub <ArrowUpRight size={16} aria-hidden="true" />
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <p class="mx-auto mt-14 max-w-7xl border-t border-border/50 pt-6 text-sm text-muted-foreground">
+    © 2026 Essence Beauty Studio — conceito fictício desenvolvido por Guilherme Soares, Lucas André e Moisés Ferreira.
+  </p>
+</footer>

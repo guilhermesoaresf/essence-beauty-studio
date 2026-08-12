@@ -1,0 +1,19 @@
+---
+import EyebrowServices from '../components/services/EyebrowServices.astro';
+import HairServices from '../components/services/HairServices.astro';
+import MakeupServices from '../components/services/MakeupServices.astro';
+import SchedulingInvitation from '../components/services/SchedulingInvitation.astro';
+import ServicesIntro from '../components/services/ServicesIntro.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Serviços — Essence Beauty Studio"
+  description="Catálogo conceitual de serviços de cabelo, maquiagem e sobrancelhas do projeto Essence."
+>
+  <ServicesIntro />
+  <HairServices />
+  <MakeupServices />
+  <EyebrowServices />
+  <SchedulingInvitation />
+</Layout>

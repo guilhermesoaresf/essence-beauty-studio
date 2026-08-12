@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import servicesIntro from '../../assets/services/services-intro.png';
+---
+
+<section class="mx-auto grid max-w-7xl items-center gap-10 pb-16 pt-2 md:gap-14 md:py-10 lg:min-h-150 lg:grid-cols-2 lg:gap-24">
+  <div class="max-w-xl">
+    <p class="mb-4 text-xs font-semibold tracking-[2.8px] text-primary md:mb-6 md:text-sm">
+      MENU DE EXPERIÊNCIAS
+    </p>
+
+    <h1 class="font-bodoni-moda text-4xl font-medium leading-[1.08] tracking-[-1.5px] text-title md:text-5xl lg:text-[64px]">
+      Elevando sua beleza natural ao nível da arte.
+    </h1>
+
+    <p class="mt-5 text-sm leading-6 text-muted-foreground md:mt-7 md:text-base md:leading-7">
+      Cada serviço no Essence é uma curadoria personalizada. Utilizamos técnicas globais para realçar seus traços com sofisticação editorial e acabamento impecável.
+    </p>
+  </div>
+
+  <Image
+    src={servicesIntro}
+    alt="Retrato editorial que apresenta o catálogo conceitual de serviços Essence"
+    class="aspect-4/5 w-full object-cover lg:justify-self-end"
+  />
+</section>

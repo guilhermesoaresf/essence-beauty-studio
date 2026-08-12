@@ -1,0 +1,22 @@
+---
+import { CalendarX2, Clock4, MapPin } from "@lucide/astro";
+import Info from "./Info.astro";
+---
+
+<div class="space-y-6">
+  <h3 class="font-bodoni-moda font-medium text-title text-[32px]">Informações Importantes</h3>
+  <div class="space-y-4">
+    <Info
+      infoText="Horários apresentados: 8h às 22h, de segunda a sábado."
+      IconComponent={Clock4}
+    />
+    <Info
+      infoText="As regras de cancelamento fazem parte apenas da demonstração."
+      IconComponent={CalendarX2}
+    />
+    <Info
+      infoText="Endereço, preços e profissionais são inteiramente fictícios."
+      IconComponent={MapPin}
+    />
+  </div>
+</div>

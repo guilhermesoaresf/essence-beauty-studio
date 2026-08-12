@@ -1,0 +1,50 @@
+---
+import Button from '../shared/Button.astro';
+import ServiceItem from './ServiceItem.astro';
+---
+
+<section class="mx-auto max-w-7xl py-16 md:py-24">
+  <div class="grid gap-4 md:grid-cols-2 md:items-end">
+    <h2 class="font-bodoni-moda text-4xl font-medium text-title md:text-5xl">
+      Maquiagem Profissional
+    </h2>
+    <p class="text-sm text-muted-foreground md:text-right md:text-base">
+      Beleza atemporal e editorial.
+    </p>
+  </div>
+
+  <div class="mt-8 grid gap-x-20 gap-y-2 md:mt-12 md:grid-cols-2 md:gap-y-8">
+    <ServiceItem
+      name="Maquiagem Social"
+      description="Para jantares e eventos sociais. Foco em elegância e durabilidade."
+      duration="60 MIN"
+      price="R$ 250"
+    />
+
+    <ServiceItem
+      name="Maquiagem para Eventos"
+      description="Produção completa para formaturas, casamentos e festas de gala."
+      duration="90 MIN"
+      price="R$ 380"
+      featured
+    />
+
+    <ServiceItem
+      name="Red Carpet Glam"
+      description="Pele blindada, contorno suave e olhar marcante com cílios premium."
+      duration="75 MIN"
+      price="R$ 420"
+    />
+
+    <ServiceItem
+      name="Noiva (Prévia + Dia)"
+      description="Consultoria completa e execução de beleza exclusiva para o seu dia."
+      duration="VARIÁVEL"
+      price="Sob consulta"
+    />
+  </div>
+
+  <div class="mt-8 flex justify-center [&>a]:w-full [&>a]:text-center md:mt-12 md:[&>a]:w-auto">
+    <Button text="AGENDAR MAQUIAGEM" href="/scheduling" />
+  </div>
+</section>

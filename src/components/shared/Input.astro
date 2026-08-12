@@ -1,0 +1,31 @@
+---
+interface Props {
+  id: string;
+  placeholder: string;
+  required: boolean;
+  type?: 'text' | 'email' | 'tel';
+  autocomplete?: string;
+  inputmode?: 'text' | 'email' | 'tel' | 'numeric';
+}
+
+const {
+  id,
+  placeholder,
+  required,
+  type = 'text',
+  autocomplete,
+  inputmode,
+} = Astro.props;
+---
+
+<input
+  type={type}
+  id={id}
+  name={id}
+  placeholder={placeholder}
+  required={required}
+  autocomplete={autocomplete}
+  inputmode={inputmode}
+  aria-describedby={`error-${id}`}
+  class="input-error pb-2.75 pt-0.5 border-b border-black text-foreground placeholder:text-placeholder focus:border-primary outline-none transition-colors w-full"
+/>

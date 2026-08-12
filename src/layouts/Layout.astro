@@ -1,0 +1,54 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Header from '../components/shared/Header.astro';
+import Modal from '../components/shared/Modal.astro';
+import Footer from '../components/shared/footer/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Essence Beauty Studio — Projeto conceitual',
+  description = 'Experiência digital conceitual para um estúdio de beleza fictício.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f9f9f9" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/og.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body class="bg-background font-montserrat text-foreground [font-variation-settings:'opsz'_12]">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+    <Modal />
+    <Header />
+    <main id="main-content" class="px-5 pb-20 pt-20 md:px-20">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import { initModal } from '../lib/modal/modal.js';
+      document.addEventListener('astro:page-load', initModal);
+    </script>
+  </body>
+</html>

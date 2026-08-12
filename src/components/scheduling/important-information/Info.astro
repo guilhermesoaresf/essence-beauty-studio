@@ -1,0 +1,17 @@
+---
+import type { Icon } from '@lucide/astro';
+
+interface Props {
+  infoText: string;
+  IconComponent: typeof Icon;
+}
+
+const { infoText, IconComponent } = Astro.props;
+---
+
+<div class="flex items-center gap-4">
+  <span class="flex items-center justify-center">
+    <IconComponent size={20} stroke-width={"3"} class='text-primary' />
+  </span>
+  <p class="text-muted-foreground">{infoText}</p>
+</div>

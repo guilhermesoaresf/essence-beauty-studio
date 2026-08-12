@@ -1,0 +1,18 @@
+---
+import { Quote } from '@lucide/astro';
+
+interface Props {
+  text: string;
+  role: string;
+}
+
+const { text, role } = Astro.props;
+---
+
+<article class="flex h-full flex-col justify-between gap-8 border border-border/50 bg-card px-8 pb-10 pt-8">
+  <div>
+    <Quote size={28} class="mb-6 text-primary" aria-hidden="true" />
+    <p class="italic leading-7 text-muted-foreground">{text}</p>
+  </div>
+  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-foreground">{role}</p>
+</article>
