@@ -18,7 +18,7 @@ Concept website for a fictional beauty studio, created as a collaborative fronte
 
 ## Tech stack
 
-- Astro 6
+- Astro 7
 - Tailwind CSS 4
 - JavaScript and TypeScript
 - Zod
